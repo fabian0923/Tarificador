@@ -2,24 +2,20 @@ package vistas;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
-import java.awt.Frame;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
-import java.awt.Font;
-import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
 
-public class Constrasena extends JFrame {
+public class Agradecimiento extends JFrame {
 
 	private JPanel contentPane;
-	private JPasswordField passwordField;
 
 	/**
 	 * Launch the application.
@@ -28,7 +24,7 @@ public class Constrasena extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Constrasena frame = new Constrasena();
+					Agradecimiento frame = new Agradecimiento();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +36,7 @@ public class Constrasena extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Constrasena() {
+	public Agradecimiento() {
 		setTitle("Tarificador SA.");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Analisis y Desarrollo de sistemas de Informacion 299763\\3er semestre\\Andres\\Tarificador\\Imagenes\\logotipo.jpg"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -50,46 +46,29 @@ public class Constrasena extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		setDefaultCloseOperation(DISPOSE_ON_CLOSE); 
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		setEnabled(false);
 		
-		JLabel lblIngreseSuConstrasea = new JLabel("Ingrese Su Constrase\u00F1a");
-		lblIngreseSuConstrasea.setFont(new Font("Arial", Font.PLAIN, 14));
-		lblIngreseSuConstrasea.setHorizontalAlignment(SwingConstants.CENTER);
-		lblIngreseSuConstrasea.setBounds(147, 80, 187, 46);
-		contentPane.add(lblIngreseSuConstrasea);
+		JLabel lblTarificadorSa = new JLabel("Tarificador SA");
+		lblTarificadorSa.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTarificadorSa.setBounds(192, 11, 83, 14);
+		contentPane.add(lblTarificadorSa);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(209, 168, 83, 20);
-		contentPane.add(passwordField);
-		
-		JButton btnCancelar = new JButton("Cancelar");
-		btnCancelar.addActionListener(new ActionListener()
-		
-		{
-			public void actionPerformed(ActionEvent e) {
-				
-				
-				
-				
-			}
-		});
-		btnCancelar.setBounds(88, 225, 91, 23);
-		contentPane.add(btnCancelar);
+		JLabel lblGraciasPorUsar = new JLabel("Gracias por usar nuestro Software");
+		lblGraciasPorUsar.setHorizontalAlignment(SwingConstants.CENTER);
+		lblGraciasPorUsar.setBounds(143, 120, 204, 14);
+		contentPane.add(lblGraciasPorUsar);
 		
 		JButton btnAceptar = new JButton("Aceptar");
 		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				Pago miPago = new Pago();
-				miPago.setVisible(true);
-				
-				
 				
 				
 				
 			}
 		});
-		btnAceptar.setBounds(311, 225, 91, 23);
+		btnAceptar.setBounds(192, 212, 91, 23);
 		contentPane.add(btnAceptar);
 	}
 

@@ -17,10 +17,15 @@ import javax.swing.SwingConstants;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+import java.awt.Toolkit;
+import java.io.File;
+import javax.swing.JMenuBar;
+import java.awt.Insets;
 
-public class Tarificador {
+public class Tarificador  {
 
-	private JFrame frame;
+	private JFrame frmTarificadorSa;
 
 	/**
 	 * Launch the application.
@@ -30,7 +35,7 @@ public class Tarificador {
 			public void run() {
 				try {
 					Tarificador window = new Tarificador();
-					window.frame.setVisible(true);
+					window.frmTarificadorSa.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -49,35 +54,36 @@ public class Tarificador {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.LIGHT_GRAY);
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
-		
-		JLabel lblNewLabel = new JLabel("Tarificador SA.");
-		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 12));
-		lblNewLabel.setBackground(Color.BLUE);
-		lblNewLabel.setBounds(178, 0, 88, 14);
-		frame.getContentPane().add(lblNewLabel);
+		frmTarificadorSa = new JFrame();
+		frmTarificadorSa.setTitle("Tarificador SA.");
+		frmTarificadorSa.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Analisis y Desarrollo de sistemas de Informacion 299763\\3er semestre\\Andres\\Tarificador\\Imagenes\\logotipo.jpg"));
+		frmTarificadorSa.getContentPane().setBackground(Color.LIGHT_GRAY);
+		frmTarificadorSa.setBounds(100, 100, 403, 330);
+		frmTarificadorSa.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmTarificadorSa.getContentPane().setLayout(null);
 		
 		JLabel lblBienvenidoAlSistema = new JLabel("Bienvenido al sistema de Tarificador SA.");
+		lblBienvenidoAlSistema.setForeground(Color.WHITE);
 		lblBienvenidoAlSistema.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblBienvenidoAlSistema.setBounds(93, 38, 261, 32);
-		frame.getContentPane().add(lblBienvenidoAlSistema);
+		frmTarificadorSa.getContentPane().add(lblBienvenidoAlSistema);
 		
 		JLabel lblPorFavorIngrese = new JLabel("Por favor ingrese la targeta");
+		lblPorFavorIngrese.setForeground(Color.WHITE);
 		lblPorFavorIngrese.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPorFavorIngrese.setBounds(132, 159, 184, 41);
-		frame.getContentPane().add(lblPorFavorIngrese);
+		frmTarificadorSa.getContentPane().add(lblPorFavorIngrese);
 		
 		JButton btnAceptar = new JButton("Aceptar");
 		btnAceptar.addActionListener(new ActionListener() {
 			
+			
 			public void actionPerformed(ActionEvent e) {
 				
-				Constrasena miContrasena= new Constrasena();
+			Constrasena miContrasena= new Constrasena();
 			miContrasena.setVisible(true);
+			
+			
 			
 			
 				
@@ -87,6 +93,15 @@ public class Tarificador {
 			}
 		});
 		btnAceptar.setBounds(178, 222, 91, 23);
-		frame.getContentPane().add(btnAceptar);
+		frmTarificadorSa.getContentPane().add(btnAceptar);
+		
+		JLabel lblNewLabel_1 = new JLabel("imagen");
+		lblNewLabel_1.setVerticalAlignment(SwingConstants.TOP);
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setIcon(new ImageIcon("Imagenes"+File.separator+"logotipo.jpg"));
+		lblNewLabel_1.setBounds(0, 1, 442, 328);
+		frmTarificadorSa.getContentPane().add(lblNewLabel_1);
+		
+		
 	}
 }
