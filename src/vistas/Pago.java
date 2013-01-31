@@ -53,7 +53,7 @@ public class Pago extends JFrame {
 		
 		JLabel lblModosDePago = new JLabel("Modos De Pago");
 		lblModosDePago.setHorizontalAlignment(SwingConstants.CENTER);
-		lblModosDePago.setBounds(182, 66, 95, 14);
+		lblModosDePago.setBounds(182, 70, 95, 14);
 		contentPane.add(lblModosDePago);
 		
 		
@@ -94,6 +94,16 @@ public class Pago extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Contrasena miContrasena = new Contrasena();
+				miContrasena.setVisible(true);
+				dispose();
+				
+				
+				
+			}
+		});
 		btnCancelar.setBounds(100, 326, 91, 23);
 		contentPane.add(btnCancelar);
 		
@@ -103,12 +113,19 @@ public class Pago extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				
 				Agradecimiento miGracias = new Agradecimiento();
+				
 				miGracias.setVisible(true);
 				miGracias.setEnabled(true);
+				dispose();
 				
 			}
 		});
 		btnAceptar.setBounds(313, 326, 91, 23);
 		contentPane.add(btnAceptar);
+		
+		JLabel lblBienvenidoSeor = new JLabel("bienvenido se\u00F1or@ .......!");
+		lblBienvenidoSeor.setHorizontalAlignment(SwingConstants.CENTER);
+		lblBienvenidoSeor.setBounds(137, 11, 184, 23);
+		contentPane.add(lblBienvenidoSeor);
 	}
 }

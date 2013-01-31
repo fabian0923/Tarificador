@@ -16,7 +16,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
 
-public class Constrasena extends JFrame {
+public class Contrasena extends JFrame {
 
 	private JPanel contentPane;
 	private JPasswordField passwordField;
@@ -28,7 +28,7 @@ public class Constrasena extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Constrasena frame = new Constrasena();
+					Contrasena frame = new Contrasena();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +40,7 @@ public class Constrasena extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Constrasena() {
+	public Contrasena() {
 		setTitle("Tarificador SA.");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Analisis y Desarrollo de sistemas de Informacion 299763\\3er semestre\\Andres\\Tarificador\\Imagenes\\logotipo.jpg"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -82,6 +82,7 @@ public class Constrasena extends JFrame {
 				
 				Pago miPago = new Pago();
 				miPago.setVisible(true);
+				dispose();
 				
 				
 				

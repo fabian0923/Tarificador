@@ -62,6 +62,10 @@ public class Agradecimiento extends JFrame {
 		JButton btnAceptar = new JButton("Aceptar");
 		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Tarificador miTarificador = new Tarificador();
+				miTarificador.setVisible(true);
+				dispose();
+				
 				
 				
 				
