@@ -16,6 +16,7 @@ import java.io.File;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
 
 public class Tarificador extends JFrame {
 
@@ -41,6 +42,8 @@ public class Tarificador extends JFrame {
 	 * Create the frame.
 	 */
 	public Tarificador() {
+		setTitle("Tarificador SA.");
+		setIconImage(Toolkit.getDefaultToolkit().getImage("Imagenes"+File.separator+"logotipo.jpg"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 398, 332);
 		contentPane = new JPanel();
@@ -65,6 +68,7 @@ public class Tarificador extends JFrame {
 		JButton btnAceptar = new JButton("Aceptar");
 		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				
 				Contrasena miContrasena= new Contrasena();
 				miContrasena.setVisible(true);
 				dispose();

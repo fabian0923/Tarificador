@@ -15,6 +15,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
+import java.io.File;
 
 public class Contrasena extends JFrame {
 
@@ -42,7 +43,7 @@ public class Contrasena extends JFrame {
 	 */
 	public Contrasena() {
 		setTitle("Tarificador SA.");
-		setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\Analisis y Desarrollo de sistemas de Informacion 299763\\3er semestre\\Andres\\Tarificador\\Imagenes\\logotipo.jpg"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("Imagenes"+File.separator+"logotipo.jpg"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -64,11 +65,12 @@ public class Contrasena extends JFrame {
 		
 		JButton btnCancelar = new JButton("Cancelar");
 		btnCancelar.addActionListener(new ActionListener()
-		
 		{
 			public void actionPerformed(ActionEvent e) {
 				
-				
+				Tarificador miTarificador = new Tarificador();
+				miTarificador.setVisible(true);
+				dispose();
 				
 				
 			}
